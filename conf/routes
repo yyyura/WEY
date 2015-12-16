@@ -1,0 +1,33 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# https://www.playframework.com/documentation/2.4.1/JavaRouting
+# Home page
+GET			/														controllers.Application.index()
+
+# Show a list of products - note optional parameter
+GET     /listProducts                      controllers.ProductCtrl.listProducts(cat: Long = 0)
+GET     /listProducts/:cat                  controllers.ProductCtrl.listProducts(cat: Long)
+
+# Display the add product page
+GET			/addProduct									controllers.ProductCtrl.addProduct()
+
+# Process the add product form after it is submitted using the POST method 
+POST		/addProductSubmit						controllers.ProductCtrl.addProductSubmit()
+
+# update a product
+GET			/updateProduct/:id					controllers.ProductCtrl.updateProduct(id:Long)
+POST		/updateProductSubmit/:id		controllers.ProductCtrl.updateProductSubmit(id:Long)
+
+# Delete a product by an id passed as a parameter
+GET     /delProduct/:id             controllers.ProductCtrl.deleteProduct(id:Long)
+
+# Login form
+GET		/login												controllers.LoginCtrl.login()
+POST	/login												controllers.LoginCtrl.authenticate()
+
+GET     /logout                     controllers.LoginCtrl.logout()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
