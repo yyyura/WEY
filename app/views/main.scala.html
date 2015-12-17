@@ -45,7 +45,7 @@
                 </button>
                 <a class="navbar-brand" href="@routes.Application.index()">WEYGYM&copy;</a>
             </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -60,117 +60,112 @@
                     <li>
                         <a href="@routes.Application.about()" class="home">About</a>
                     </li>
-                        <li>
-                            <a class="navbar-brand" href="@routes.ProductCtrl.listProducts(0)">Members Catalogue</a>
-                        </li>
-                            <!-- Login/ logout Link - check if user logged in -->
-                        <li>
-                        @if(user != null) {
-                            <a href="@routes.LoginCtrl.logout()">Logout @user.name</a>
-                        } else {
-                            <a href="@routes.LoginCtrl.login()">Login</a>
-                        }
-                        </li>
-                    </ul>
-                </div>
-                    <!-- /.navbar-collapse -->
+                    <li>
+                        <a class="navbar-brand" href="@routes.ProductCtrl.listProducts(0)">Members Catalogue</a>
+                    </li>
+                        <!-- Login/ logout Link - check if user logged in -->
+                    <li>
+                    @if(user != null) {
+                        <a href="@routes.LoginCtrl.logout()">Logout @user.name</a>
+                    } else {
+                        <a href="@routes.LoginCtrl.login()">Login</a>
+                    }
+                    </li>
+                </ul>
+            </div>
+                <!-- /.navbar-collapse -->
                 <!-- /.container -->
         </nav>
         <div class="container">
 
+                <!-- Page Content -->
+                <!-- Start Content -->
+            @content
+                <!-- End Content -->
 
-        <!-- Page Content -->
-                        <!-- Start Content -->
-                    @content
-                        <!-- End Content -->
+                <!-- /.container -->
+
+
+            <hr>
+
+                <!-- Footer -->
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2>Location</h2>
+                    <p>Tallaght</p>
+                    <p>Dublin</p>
+                    <p>Rathcoole</p>
+                    <p>
+                        <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
+                    </p>
+                </div>
+
+
+
+
+                <div class="col-sm-3">
+                    <h2>Opening Hours</h2>
+                    <address>
+                        <strong>Mon - Fri</strong>
+                        <br>06.00 to 22.00
+                        <br>
+                        <strong>Saturday</strong>
+                        <br>08.00 to 18.00
+                        <br>
+                        <strong>Sunday</strong>
+                        <br>08.00 to 18.00
+                        <br>
+                        <strong>Bank Holidays</strong>
+                        <br>08.00 to 18.00
+                    </address>
 
                 </div>
-                    <!-- /.container -->
 
+                <div class="col-sm-3">
+                    <h2>Contact Us</h2>
+                    <address>
+                        <strong>WEYGYM</strong>
+                        <br>123 Fake Street
+                        <br>Tallaght, D24
+                        <br>IRELAND
+                    </address>
+                    <address>
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                        <br>
+                        <abbr title="Email">E:</abbr> weygym&#64;gmail.com
+                    </address>
+                </div>
 
-                    <hr>
+                <div class="col-sm-3">
+                    <h2>Social Life</h2>
 
-                        <!-- Footer -->
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>Location</h2>
-                <p>Tallaght</p>
-                <p>Dublin</p>
-                <p>Rathcoole</p>
-                <p>
-                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
-                </p>
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    @*<address>*@
+                    @*<strong>Start Bootstrap</strong>*@
+                    @*<br>3481 Melrose Place*@
+                    @*<br>Beverly Hills, CA 90210*@
+                    @*<br>*@
+                    @*</address>*@
+                    @*<address>*@
+                    @*<abbr title="Phone">P:</abbr> (123) 456-7890*@
+                    @*<br>*@
+                    @*<abbr title="Email">E:</abbr>weygym gmail.com*@
+                    @*</address>*@
+                </div>
+
             </div>
-
-
-
-
-            <div class="col-sm-3">
-                <h2>Opening Hours</h2>
-                <address>
-                    <strong>Mon - Fri</strong>
-                    <br>06.00 to 22.00
-                    <br>
-                    <strong>Saturday</strong>
-                    <br>08.00 to 18.00
-                    <br>
-                    <strong>Sunday</strong>
-                    <br>08.00 to 18.00
-                    <br>
-                    <strong>Bank Holidays</strong>
-                    <br>08.00 to 18.00
-                </address>
-
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Contact Us</h2>
-                <address>
-                    <strong>WEYGYM</strong>
-                    <br>123 Fake Street
-                    <br>Tallaght, D24
-                    <br>IRELAND
-                </address>
-                <address>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                    <br>
-                    <abbr title="Email">E:</abbr> weygym&#64;gmail.com
-                </address>
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Social Life</h2>
-
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-
-
-                @*<address>*@
-                @*<strong>Start Bootstrap</strong>*@
-                @*<br>3481 Melrose Place*@
-                @*<br>Beverly Hills, CA 90210*@
-                @*<br>*@
-                @*</address>*@
-                @*<address>*@
-                @*<abbr title="Phone">P:</abbr> (123) 456-7890*@
-                @*<br>*@
-                @*<abbr title="Email">E:</abbr>weygym gmail.com*@
-                @*</address>*@
-            </div>
-
+                <!-- /.row -->
 
         </div>
-            <!-- /.row -->
-
 
             <!-- Footer -->
-        </div>
 
         <footer class="container-fluid text-center">
             <form class="form-inline">
@@ -193,13 +188,13 @@
 
             <!-- /.container -->
 
-                    <!-- /.container -->
+            <!-- /.container -->
 
-                    <!-- jQuery -->
-                <script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
+            <!-- jQuery -->
+        <script src="@routes.Assets.versioned("javascripts/jquery.js")"></script>
 
-                    <!-- Bootstrap Core JavaScript -->
-                <script src="@routes.Assets.versioned("javascripts/bootstrap.min.js")"></script>
+            <!-- Bootstrap Core JavaScript -->
+        <script src="@routes.Assets.versioned("javascripts/bootstrap.min.js")"></script>
 
     </body>
 
