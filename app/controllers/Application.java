@@ -26,6 +26,22 @@ public class Application extends Controller {
 
         return ok(index.render());
     }
+    public Result join() {
 
+        return ok(join.render());
+    }
+    public Result about() {
+
+        return ok(about.render());
+    }
+    public Result gallery() {
+
+        return ok(gallery.render());
+    }
+
+    public Result classes() {
+
+        return ok(classes.render());
+    }
 
 }
