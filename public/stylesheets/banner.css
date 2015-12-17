@@ -1,0 +1,103 @@
+.bannereffect {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+
+    margin-bottom: .10em;
+
+    height: 400px;
+    background-image: url('../images/slide3.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.bannereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    background-color: rgba(0, 55,55, 0.7);
+    top: -200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.1s ease-out 0.5s;
+    transition: all 0.1s ease-out 0.5s;
+}
+
+.bannereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    top: 0px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.bannereffect img {
+    display: block;
+    position: relative;
+}
+
+.bannereffect h2 {
+    text-transform: uppercase;
+    color: #0ddddd;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.1s;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.bannereffect:hover h2 {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.bannereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 17px;
+    text-transform: uppercase;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    color: #fff;
+    border: 1px solid #000;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.bannereffect a.info:hover {
+    box-shadow: 0 0 50px #0ddddd;
+    color: #044444;
+    background: #AA1111;
+}
+
+.bannereffect:hover a.info {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    box-shadow: 0 0 5px #000;
+    color: #fff;
+    border: 1px solid #000;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}

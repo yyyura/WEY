@@ -1,0 +1,105 @@
+/*!
+ * Start Bootstrap - Business Frontpage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    border-radius: 10px;
+    background: #077777 !important;
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+/*.business-header {
+    height: 400px;
+    background-image: url('../images/slide3.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}*/
+
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #000;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+#googleMap{
+    height:400px;
+    width:100%;
+    float: none;
+}
+.thumbnail {
+    padding: 0 0 .15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: .30em;
+}
+.thumbnail {
+    opacity: 5em;
+    hover: 5em;
+    background: #EEEEE0;
+}
+
+h1{
+    text-align: center;
+}
+h2,p,hr{
+    color: #055555;
+}
+
+.container{
+    background: #fffff0;
+    box-shadow: 0px 0px 70px #111;
+}
+.col-sm-4:hover {
+
+    box-shadow: 0 5px 20px rgb(0, 0, 10), 0 15px 30px 00px rgba(0, 0, 0, 0.3);
+}
+
+/*###################################################################################################################*/
+.navbar {
+    margin-bottom: 0;
+    background-color: #222222;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar a:hover{
+    color: #0ddddd !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #000 !important;
+    background-color: #0ddddd !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
