@@ -10,6 +10,10 @@ GET         /classes                               controllers.Application.class
 GET         /join                               controllers.Application.join()
 GET         /gallery                               controllers.Application.gallery()
 GET         /boxing                               controllers.Application.boxing()
+GET         /swimming                               controllers.Application.swimming()
+GET         /weights                               controllers.Application.weights()
+
+
 
 
 # Show a list of products - note optional parameter

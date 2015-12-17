@@ -87,8 +87,8 @@
 
 .bannereffect a.info:hover {
     box-shadow: 0 0 50px #0ddddd;
-    color: #044444;
-    background: #AA1111;
+    color: #000;
+    background: #0ddddd;
 }
 
 .bannereffect:hover a.info {

@@ -48,4 +48,12 @@ public class Application extends Controller {
 
         return ok(boxing.render());
     }
+    public Result swimming() {
+
+        return ok(swimming.render());
+    }
+    public Result weights() {
+
+        return ok(weights.render());
+    }
 }

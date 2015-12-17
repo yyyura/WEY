@@ -1,4 +1,4 @@
-@main("Home", user=null) {
+@main("Home", user = null) {
 
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
@@ -14,45 +14,37 @@
     </header>
     <hr>
 
-
+    <p>Welcome to WEYGYM. <br> We currently run daily classes, browse our options and when you find the class your into give us a call and book your spot.
+        Please enjoy the pictures of our top of the range equipment you will experience in WEYGYM.
+        If you see something you like or would like to see more why not call into any of our three branch’s located in Tallaght, Rathcoole or Lucan.
+        I hope you find what you’re looking for with WEYGYM…..</p>
     <div class="pricing pricing--sonam">
         <div class="pricing__item">
-            <h3 class="pricing__title">Startup</h3>
-            <div class="pricing__price"><span class="pricing__currency">€</span>9.90</div>
-            <p class="pricing__sentence">Small business solution</p>
+            <h3 class="pricing__title">Student</h3>
+            <div class="pricing__price"><span class="pricing__currency">€</span>25.90</div>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Unlimited calls</li>
-                <li class="pricing__feature">Free hosting</li>
-                <li class="pricing__feature">40MB of storage space</li>
+                <li class="pricing__feature">Free classes</li>
+
             </ul>
-            <button class="pricing__action">Choose plan</button>
+            <button class="pricing__action">Call in</button>
         </div>
         <div class="pricing__item">
             <h3 class="pricing__title">Standard</h3>
             <div class="pricing__price"><span class="pricing__currency">€</span>29,90</div>
-            <p class="pricing__sentence">Medium business solution</p>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Unlimited calls</li>
-                <li class="pricing">Free hosting</li>
-                <li class="pricing__feature">10 hours of support</li>
-                <li class="pricing__feature">Social media integration</li>
-                <li class="pricing__feature">1GB of storage space</li>
+                <li class="pricing__feature">Free classes off peak times</li>
+
             </ul>
-            <button class="pricing__action">Choose plan</button>
+            <button class="pricing__action">Call in</button>
         </div>
         <div class="pricing__item">
-            <h3 class="pricing__title">Professional</h3>
+            <h3 class="pricing__title">Full membership</h3>
             <div class="pricing__price"><span class="pricing__currency">€</span>59,90</div>
             <p class="pricing__sentence">Gigantic business solution</p>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Unlimited calls</li>
-                <li class="pricing__feature">Free hosting</li>
-                <li class="pricing__feature">Unlimited hours of support</li>
-                <li class="pricing__feature">Social media integration</li>
-                <li class="pricing__feature">Anaylitcs integration</li>
-                <li class="pricing__feature">Unlimited storage space</li>
-            </ul>
-            <button class="pricing__action">Choose plan</button>
+                <li class="pricing__feature">Unlimited usage</li>
+                </ul>
+            <button class="pricing__action">Call in</button>
         </div>
     </div>
         <!-- /.row -->
@@ -84,7 +76,7 @@
                         <img src=@routes.Assets.versioned("images/boxing.jpg") alt="Boxing">
                         <div class="overlay">
                             <h2>Boxing Studio</h2>
-                            <a class="info"  href="@routes.Application.classes()">link here</a>
+                            <a class="info" href="@routes.Application.classes()">link here</a>
                         </div>
                     </div>
                 </div>
