@@ -12,7 +12,7 @@
   <div class="col-md-3">
       <div class="list-group">
 				<!-- Start of For loop - For each c in categories add a link -->
-				<a href="@routes.ProductCtrl.listProducts(0)" class="list-group-item">All categories</a>
+				<a href="@routes.ProductCtrl.listProducts(0)" class="list-group-item">All locations</a>
 				@for(c <- categories) {
           <a href="@routes.ProductCtrl.listProducts(c.id)" class="list-group-item">@c.name</a>
 				}
@@ -32,11 +32,11 @@
 			<tr>
 				<th></th>
 				<th>ID</th>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Category</th>
-				<th>Stock</th>
-				<th>Price</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Location</th>
+				<th>Age</th>
+				<th>Weight</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -47,7 +47,7 @@
 					@if(resource("public/images/productImages/thumbnails/" + p.id + ".jpg").isDefined) {
 						<td><img src="/assets/images/productImages/thumbnails/@(p.id).jpg"</td>
 					} else {
-						<td><img src="/assets/images/productImages/thumbnails/noImage.png"</td>
+						<td><img src="/assets/images/productImages/thumbnails/oicon-run-L.png"</td>
 					}
 					<td>@p.id</td>
 					<td>@p.name</td>
@@ -75,7 +75,7 @@
 		@if(user != null) {
 		<div>
 			<a href="@routes.ProductCtrl.addProduct()">
-				<button class="btn btn-primary">Add a Product</button>
+				<button class="btn btn-primary">Add a Member</button>
 			</a>
 		</div>
 		}

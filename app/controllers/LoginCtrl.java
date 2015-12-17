@@ -40,7 +40,7 @@ public class LoginCtrl extends Controller {
 					// Store the logged in email in the session
 		      session("email", loginForm.get().email);
 					// Return to home page
-		      return redirect(routes.Application.index());
+		      return redirect(routes.ProductCtrl.listProducts(0));
 		  }
 		}	
 

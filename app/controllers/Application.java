@@ -17,9 +17,14 @@ import models.*;
 
 public class Application extends Controller {
 
+//    public Result listProducts() {
+//
+//				return redirect(routes.ProductCtrl.listProducts(0));
+//    }
+
     public Result index() {
 
-				return redirect(routes.ProductCtrl.listProducts(0));
+        return ok(index.render());
     }
 
 

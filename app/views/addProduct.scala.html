@@ -6,42 +6,42 @@
 though a static HTML form would also work -->
 @import helper._
 
-<!-- The page will be based on the main template -->
+    <!-- The page will be based on the main template -->
 @main("New Product", user) {
 
-	<h3>Add a new Product</h3>
-	
-	<!-- Use the views.html.helpers package to create the form -->
-	@form(action = routes.ProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role->"form", 'enctype -> "multipart/form-data") {
-		
-		<!-- Build the form, adding an input for each field -->
-		<!-- Note the label parameter -->
-		@inputText(addProductForm("name"), '_label -> "Name",'class -> "form-control")
-		@inputText(addProductForm("description"), '_label -> "Description",'class -> "form-control")
-    @select(
-        addProductForm("category.id"), 
-        options(Category.options), 
-        '_label -> "Category", '_default -> "-- Choose a category --",
-        '_showConstraints -> false, 'class -> "form-control"
-    )
-		@inputText(addProductForm("stock"), '_label -> "Stock",'class -> "form-control")
-		@inputText(addProductForm("price"), '_label -> "Price",'class -> "form-control")
+    <h3>Add a new Member</h3>
 
-		<!-- Image upload input -->
-		<label>Image Upload</label>
+        <!-- Use the views.html.helpers package to create the form -->
+    @form(action = routes.ProductCtrl.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form", 'enctype -> "multipart/form-data") {
+
+        <!-- Build the form, adding an input for each field -->
+        <!-- Note the label parameter -->
+        @inputText(addProductForm("name"), '_label -> "First Name", 'class -> "form-control")
+        @inputText(addProductForm("description"), '_label -> "Last Name", 'class -> "form-control")
+        @select(
+            addProductForm("category.id"),
+            options(Category.options),
+            '_label -> "Location", '_default -> "-- Choose a location --",
+            '_showConstraints -> false, 'class -> "form-control"
+        )
+        @inputText(addProductForm("stock"), '_label -> "Age", 'class -> "form-control")
+        @inputText(addProductForm("price"), '_label -> "Weight", 'class -> "form-control")
+
+        <!-- Image upload input -->
+    <label>Image Upload</label>
     <input class="btn-sm btn-default" type="file" name="upload">
-	
-		<br><br>
 
-	<!-- Add a submit button -->
-  <div class="actions">
-      <input type="submit" value="Add Product" class="btn btn-primary">
-			<a href="@routes.Application.index()" 
-				<button class="btn btn-warning">Cancel</button>
-			</a>
-  </div>
-	} <!-- End Form definition -->
+    <br> <br>
 
-} <!-- End of page content -->
+        <!-- Add a submit button -->
+    <div class="actions">
+        <input type="submit" value="Add Member" class="btn btn-primary">
+        <a href="@routes.Application.index()"
+        <button class="btn btn-warning">Cancel</button>
+        </a>
+    </div>
+} <!-- End Form definition -->
+
+    } <!-- End of page content -->
 
 
