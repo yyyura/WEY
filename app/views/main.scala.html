@@ -49,16 +49,16 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="@routes.Application.join()" class="home">Join Us</a>
+                        <a class="navbar-brand" href="@routes.Application.join()" class="home">Join Us</a>
                     </li>
                     <li>
-                        <a href="@routes.Application.classes()" class="home">Classes</a>
+                        <a class="navbar-brand" href="@routes.Application.classes()" class="home">Classes</a>
                     </li>
                     <li>
-                        <a href="@routes.Application.gallery()" class="home">Gallery</a>
+                        <a class="navbar-brand" href="@routes.Application.gallery()" class="home">Gallery</a>
                     </li>
                     <li>
-                        <a href="@routes.Application.about()" class="home">About</a>
+                        <a class="navbar-brand" href="@routes.Application.about()" class="home">About</a>
                     </li>
                     <li>
                         <a class="navbar-brand" href="@routes.ProductCtrl.listProducts(0)">Members Catalogue</a>
@@ -66,9 +66,9 @@
                         <!-- Login/ logout Link - check if user logged in -->
                     <li>
                     @if(user != null) {
-                        <a href="@routes.LoginCtrl.logout()">Logout @user.name</a>
+                        <a class="navbar-brand" href="@routes.LoginCtrl.logout()">Logout @user.name</a>
                     } else {
-                        <a href="@routes.LoginCtrl.login()">Login</a>
+                        <a class="navbar-brand" href="@routes.LoginCtrl.login()">Login</a>
                     }
                     </li>
                 </ul>
