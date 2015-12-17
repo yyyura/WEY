@@ -1,7 +1,8 @@
 @(form: Form[models.Login], user: models.User)
 
 @main("Login Required", user) {
-<div class="col-xs-4">
+	<form class="form-horizontal">
+
   <h3>Sign in</h3>
 	<!-- Display login errors if they exist -->
 	@if(form.hasGlobalErrors) {
@@ -12,17 +13,25 @@
 	<!-- The login form -->
 	@helper.form(action = routes.LoginCtrl.authenticate) {
 
+
     <div class="form-group">
+		<div class="col-xs-4">
         <input type="text" name="email" class="form-control input-xs" placeholder="Email" value="@form("email").value">
+			</div>
     </div>
     <div class="form-group">
+		<div class="col-xs-4">
         <input type="password" name="password" class="form-control input-xs" placeholder="Password">
+		</div>
     </div>
 
 		<!-- Add a submit button -->
 		<div class="form-group">
+			<div class="col-xs-4">
 		    <input type="submit" value="Sign In" class="btn btn-primary">
 		</div>
+		</div>
 		}
-</div>
+
+	</form>
 }
