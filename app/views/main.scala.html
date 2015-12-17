@@ -48,28 +48,43 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a class="navbar-brand" href="@routes.Application.classes()" class="home">
+                            <span class="	glyphicon glyphicon-calendar"></span>
+                            Classes</a>
+                    </li>
+                    <li>
+                        <a class="navbar-brand" href="@routes.Application.gallery()" class="home">
+                            <span class="glyphicon glyphicon-th"></span>
+                            Gallery</a>
+                    </li>
+
+                    <li>
+                        <a class="navbar-brand" href="@routes.ProductCtrl.listProducts(0)">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            Members Catalogue</a>
+
+                    </li>
                     <li>
                         <a class="navbar-brand" href="@routes.Application.join()" class="home">Join Us</a>
-                    </li>
-                    <li>
-                        <a class="navbar-brand" href="@routes.Application.classes()" class="home">Classes</a>
-                    </li>
-                    <li>
-                        <a class="navbar-brand" href="@routes.Application.gallery()" class="home">Gallery</a>
-                    </li>
-                    <li>
-                        <a class="navbar-brand" href="@routes.Application.about()" class="home">About</a>
-                    </li>
-                    <li>
-                        <a class="navbar-brand" href="@routes.ProductCtrl.listProducts(0)">Members Catalogue</a>
                     </li>
                         <!-- Login/ logout Link - check if user logged in -->
                     <li>
                     @if(user != null) {
                         <a class="navbar-brand" href="@routes.LoginCtrl.logout()">Logout @user.name</a>
                     } else {
-                        <a class="navbar-brand" href="@routes.LoginCtrl.login()">Login</a>
+                        <a  class="navbar-brand" href="@routes.LoginCtrl.login()">
+                            <span class="glyphicon glyphicon-log-in"></span>
+                            Login
+
+                        </a>
                     }
+                    </li>
+                    <li>
+                        <a class="navbar-brand" href="@routes.Application.about()" class="home">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            About</a>
                     </li>
                 </ul>
             </div>
