@@ -9,6 +9,7 @@ GET         /about                               controllers.Application.about()
 GET         /classes                               controllers.Application.classes()
 GET         /join                               controllers.Application.join()
 GET         /gallery                               controllers.Application.gallery()
+GET         /boxing                               controllers.Application.boxing()
 
 
 # Show a list of products - note optional parameter

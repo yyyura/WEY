@@ -44,4 +44,8 @@ public class Application extends Controller {
         return ok(classes.render());
     }
 
+    public Result boxing() {
+
+        return ok(boxing.render());
+    }
 }
